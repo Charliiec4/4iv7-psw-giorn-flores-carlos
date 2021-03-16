@@ -1,23 +1,32 @@
-*{
-    padding:0;
-    margin:0;
-    color:rgb(211, 129, 129);
-    text-align: center;
+@keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
 }
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    
-
+@keyframes altern{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
 }
-nav{
-    display: inline-block;
-    width: 80%;
-    height: 60px;
-    margin: 3px;
-    padding: 5px;
-    background-color: cadetblue;
-    color: coral;
+/*Inicio formato*/
+
+
+
+.loading{
+    width:34px;
+    height: 34px;
+    border:10px solid rgb(66, 180, 218);
+    border-top: 10px solid rgb(66, 82, 224);
+    border-radius: 50%;
+    animation: girar 2s linear infinite;
+    float: right;
+    padding: 0%;
 }
 
 .menu {
@@ -26,7 +35,97 @@ nav{
     background-color: darkblue;
     width: 90%;
     max-width: 1000px;
-    margin: auto;
-    
+    margin: auto; 
+    text-align: center;
+     
 }
 
+.menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a:hover{
+    background-color: coral;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 70%;
+    height: 500px;
+    margin: 2px solid black;
+    padding-left: 15%;
+}
+.cuerpo{
+    border: 2px solid black;
+    height: 725px;
+    
+}
+/*Lateral izquierdo*/
+.lateral_izq{
+    box-sizing: border-box;
+    width: 200px;
+    border: 2px solid black;
+    float: left;
+    color: white;
+    background-color: rgb(65, 60, 90);
+    height: 537px;
+}
+.lateral_izq p{
+    font-size: 20px;
+    background-color: rgb(49, 46, 61);
+    
+}
+.encabezado{
+    padding-left: 25%;
+}
+.encabezado p{
+    font-size: 25px;
+    padding-left: 27%;
+}
+.centro p{
+    font-size: 30px;
+    background-color: rgb(177, 191, 196);
+    padding-left: 25%;
+    height: 30px;
+    border: 2px solid black;
+}
+.hr_encabezado{
+    width: 70%; 
+    height: 10px; 
+    background-color: black;
+}
+footer{
+    box-sizing: border-box;
+    font-size: 50px;
+    display: flex;
+    padding: 50px;
+    color:#fff;
+    background-color: #011c39;
+}
+.lista_hobbies{
+    padding-left: 23%;
+}
+body p{
+    font-size: 25px;
+}
+body li{
+    font-size: 20px;
+}
+.lisat_skills li{
+    padding-left: 23%;
+    list-style: none;
+}
+.Primer_Proyecto{
+    float: right;
+}
