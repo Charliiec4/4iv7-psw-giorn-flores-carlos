@@ -1,0 +1,72 @@
+*{
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(marmol.jpg);
+    width: 90%;
+    margin: auto;
+    display: flex;
+    
+}
+flex-container{
+    max-width: 1000px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+header{
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+header nav {
+    width: 40%;
+    color: royalblue;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+header img{
+    width: 60px;
+    vertical-align: top;
+}
+header .h1{
+    line-height: 60px;
+}
+header nav a{
+    text-decoration: none;
+    background-color: #c0392b;
+    color: white;
+    text-align: center;
+    height: 50px;
+    padding: 10px;
+    display: inline-block;
+    flex-grow: 1;
+    font-size: 20px;
+    
+}
+header nav a:hover{
+    background-color: orange;
+}
+.all{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+.cuerpo{
+    width: 70%;
+    
+    
+}
+.lateral_der{
+    width: 30%;
+    background-color: black;
+    color:white;
+}
