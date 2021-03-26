@@ -5,6 +5,8 @@
 }
 body{
     background-image: url(marmol.jpg);
+    background-repeat: no-repeat, repeat;
+    background-size: 100%;
     width: 90%;
     margin: auto;
     display: flex;
@@ -16,7 +18,8 @@ flex-container{
     flex-wrap: wrap;
 }
 header{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
     color: black;
     width: 100%;
     padding: 20px;
@@ -41,7 +44,7 @@ header .h1{
 }
 header nav a{
     text-decoration: none;
-    background-color: #c0392b;
+    background-color: #3d2b29;
     color: white;
     text-align: center;
     height: 50px;
@@ -49,24 +52,33 @@ header nav a{
     display: inline-block;
     flex-grow: 1;
     font-size: 20px;
-    
+    text-shadow: .6rem .6rem .2rem black, 0 0 0.2em royalblue, 0 0 0.2em yellow;
+    text-decoration: none;
+    padding: 10px;
+    -webkit-transition: all 200ms ease-out;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-out;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-out;
+    -moz-transform: scale(1);
 }
 header nav a:hover{
     background-color: orange;
 }
 .all{
+    display: -webkit-flex;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-
+    -webkit-flex-flow: row wrap;
 }
 .cuerpo{
     width: 70%;
-    
-    
 }
 .lateral_der{
     width: 30%;
     background-color: black;
     color:white;
+    display: flex;
+    flex-wrap: wrap;
 }
