@@ -12,13 +12,11 @@ function interes(){
     var valor = document.formulario.cantidad.value;
     var resultado = parseInt(valor);
     var interes = resultado*0.02;
-    var total = resutlado + interes;
-
-    docuemnto.formulario.sueldoit.value=$
+    var total = resultado + interes;
+    document.formulario.sueldoti.value="$"+total;
 }
 
 function borrar(){
-
     document.formulario.cantidad.value="";
-    document.formulario.sueldoit.value="";
+    document.formulario.sueldoti.value="";
 }
