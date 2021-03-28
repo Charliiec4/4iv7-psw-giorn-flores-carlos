@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(marmol.jpg);
+    
     background-repeat: no-repeat,;
     background-size: 100%;
-    width: 90%;
+    width: 100%;
     margin: auto;
     display: flex;
     
@@ -38,7 +38,7 @@ header nav {
     border-radius: 50px;
 }
 header img{
-    width: 60px;
+    width: 100px;
     vertical-align: top;
 }
 header .h1{
@@ -67,6 +67,33 @@ header nav a{
 header nav a:hover{
     background-color: orange;
 }
+.imgs_container{
+    
+}
+.img_ico{
+    text-shadow: .6rem .6rem .2rem black, 0 0 0.2em royalblue, 0 0 0.2em yellow;
+    text-decoration: none;
+    padding: 10px;
+    -webkit-transition: all 200ms ease-out;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-out;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-out;
+    -moz-transform: scale(1);
+
+}
+.img_ico:hover{
+    box-shadow: 0px 0px 50px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-out;
+    /*identificador de web*/
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-out;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-out;
+    -moz-transform: scale(1);
+    
+}
 .all{
     display: -webkit-flex;
     display: flex;
@@ -75,16 +102,8 @@ header nav a:hover{
     -webkit-flex-flow: row wrap;
 }
 .cuerpo{
-    width: 70%;
+    width: 80%;
     min-width: 400px;
-}
-.lateral_der{
-    width: 30%;
-    background-color: black;
-    color:white;
-    flex-grow: 1;
-    display: flex;
-    flex-wrap: wrap;
 }
 .titulo{
     font-size: 25px;
