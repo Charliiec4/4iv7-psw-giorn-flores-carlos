@@ -20,7 +20,7 @@ flex-container{
 }
 header{
   
-    background-image: linear-gradient(to right, rgb(253, 253, 253) , rgb(116, 119, 80));
+    background-image: linear-gradient(to right, rgb(253, 253, 253) , rgb(95, 104, 224));
     border-radius: 5px;
     color: black;
     width: 100%;
@@ -47,7 +47,6 @@ header .h1{
 }
 header nav a{
     text-decoration: none;
-    background-color: #3d2b29;
     color: white;
     text-align: center;
     height: 50px;
@@ -59,17 +58,20 @@ header nav a{
     text-decoration: none;
     padding: 10px;
     -webkit-transition: all 200ms ease-out;
-    -webkit-transform: scale(1);
+    -webkit-transform: scale(1.02);
     -ms-transition: all 200ms ease-out;
     -ms-transform: scale(1);
     -moz-transition: all 200ms ease-out;
-    -moz-transform: scale(2);
+    -moz-transform: scale(1);
 }
 header nav a:hover{
     background-color: orange;
+    border-radius: 20%;
 }
 .imgs_container{
-    
+    width: 90%;
+    margin: auto;
+    align-content: center;
 }
 .img_ico{
     text-shadow: .6rem .6rem .2rem black, 0 0 0.2em royalblue, 0 0 0.2em yellow;
@@ -109,12 +111,12 @@ header nav a:hover{
     font-size: 25px;
 }
 footer{
-    box-sizing: border-box;
     font-size: 30px;
     display: flex;
     padding: 50px;
     color:#fff;
     background-color: #011c39;
+    width: 100%;
 }
 .final{
     font-size: 10px;
