@@ -80,12 +80,21 @@ header nav a:hover{
 }
 .lateral_der{
     width: 30%;
-    background-color: black;
-    color:white;
     flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
+    float: right;
+    font-size: 20px;
+    min-width: 300px;
 }
 .titulo{
     font-size: 25px;
+}
+footer{
+    font-size: 30px;
+    display: flex;
+    padding: 50px;
+    color:#fff;
+    background-image: linear-gradient(to right, rgb(147, 189, 81) , rgb(116, 119, 80));
+    width: 100%;
 }

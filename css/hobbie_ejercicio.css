@@ -1,0 +1,101 @@
+.container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+  
+  .columna1, 
+  .columna3 {
+    width: 100%;
+   
+  }
+  
+  @media (min-width: 600px) {
+    .columna1 {
+      width: 70%;
+      -webkit-order: 1;
+      order: 1;
+    }
+  
+    .columna3 {
+      width: 30%;
+      -webkit-order: 2;
+      order: 2;
+    }
+  }
+  
+  @media (min-width: 500px) { 
+    .columna3 {
+      width: 20%;
+    }
+  }
+
+  *{
+      margin: auto;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  body{
+      background-image: url(marmol.jpg);
+      background-repeat: no-repeat,;
+      background-size: 100%;
+      width: 90%;
+      margin: auto;
+  }
+  header{
+      background-image: linear-gradient(to right, rgb(253, 253, 253) , rgb(0, 0, 0));
+      border-radius: 5px;
+      color: black;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      border-radius: 5px;
+  }
+  header nav {
+      width: 40%;
+      color: royalblue;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      border-radius: 50px;
+  }
+  header img{
+      width: 60px;
+      vertical-align: top;
+  }
+  header .h1{
+      line-height: 60px;
+  }
+  header nav a{
+      text-decoration: none;
+      background-color: #3d2b29;
+      color: white;
+      text-align: center;
+      height: 50px;
+      padding: 10px;
+      display: inline-block;
+      flex-grow: 1;
+      font-size: 20px;
+      text-shadow: .6rem .6rem .2rem black, 0 0 0.2em royalblue, 0 0 0.2em yellow;
+      text-decoration: none;
+      padding: 10px;
+      -webkit-transition: all 200ms ease-out;
+      -webkit-transform: scale(1);
+      -ms-transition: all 200ms ease-out;
+      -ms-transform: scale(1);
+      -moz-transition: all 200ms ease-out;
+      -moz-transform: scale(2);
+  }
+  header nav a:hover{
+      background-color: orange;
+  }
+  body .titulo{
+      font-size: 30px;
+  }
+  body img{
+      justify-content: center;
+  }
