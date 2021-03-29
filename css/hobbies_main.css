@@ -111,15 +111,18 @@ header nav a:hover{
     font-size: 25px;
 }
 footer{
-    font-size: 30px;
     display: flex;
+    font-size: 30px;
     padding: 50px;
     color:#fff;
     background-color: #011c39;
     width: 100%;
 }
-.final{
+footer .final{
     font-size: 10px;
+}
+footer .contact_p{
+    font-size: 25px;
 }
 body ol{
     font-size: 20px;

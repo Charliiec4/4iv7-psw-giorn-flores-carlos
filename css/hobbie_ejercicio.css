@@ -100,3 +100,17 @@
   body .sub{
       font-size: 25px;
   }
+  footer{
+    display: flex;
+    font-size: 60px;
+    padding: 50px;
+    color:#fff;
+    background-image: linear-gradient(to right, rgb(179, 135, 149) , rgb(0, 0, 0));
+    width: 100%;
+}
+footer .final{
+    font-size: 10px;
+}
+footer .contact_p{
+    font-size: 50px;
+}
