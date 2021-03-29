@@ -37,9 +37,7 @@
       box-sizing: border-box;
   }
   body{
-      background-image: url(marmol.jpg);
-      background-repeat: no-repeat,;
-      background-size: 100%;
+    background-image: linear-gradient(to right, rgb(253, 253, 253) , rgb(156, 154, 154));
       width: 90%;
       margin: auto;
   }
@@ -97,5 +95,8 @@
       font-size: 30px;
   }
   body img{
-      justify-content: center;
+      
+  }
+  body .sub{
+      font-size: 25px;
   }
