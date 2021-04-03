@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/problema.css">
+    <script src="JS/problema4.js"></script>
+    <title>Problema 4</title>
+</head>
+
+<body>
+    <h1>Problema 4</h1>
+    <hr>
+    <br>
+    <p>Calcula tu promedio final de algoritmos ingrseando los datos correspondientes.</p>
+    <br>
+    <form name="formulario" method="GET" action="problema1.html">
+        <table align="center" border="1">
+            <tr>
+                <td class="td_up">1° Parcial:</td>
+                <td class="td_down"><input type="text" name="parcial1" class="datos" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up">2° Parcial:</td>
+                <td class="td_down"><input type="text" name="parcial2" class="datos" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up">3° Parcial:</td>
+                <td class="td_down"><input type="text" name="parcial3" class="datos" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up">Examen:</td>
+                <td class="td_down"><input type="text" name="examen" class="datos" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up">Trabajo Final:</td>
+                <td class="td_down"><input type="text" name="trabajo" class="datos" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up"></td>
+                <td class="td_down">
+                    <input type="button" value="Promediar" name="enviar"  onclick="return verificacion(event)">
+                </td>
+            </tr>
+            <tr>
+                <td class="td_up">Promedio:</td>
+                <td class="td_down"><input type="text" name="promedio" id="promedio" readonly="readonly" class="input_text"></td>
+            </tr>
+            <tr>
+                <td class="td_up"></td>
+                <td class="td_down"><input type="button" name="borrard" value="Borrar" onclick="borrar()"></td>
+            </tr>
+        </table>
+    </form>
+    <a href="formulario.html">Regreso a principal formulario</a>
+</body>
+
+</html>
