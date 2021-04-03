@@ -15,24 +15,24 @@
     <form name="formulario" method="GET" action="problema1.html">
         <table align="center" border="1">
             <tr>
-                <td class="td_up">Numero 1</td>
-                <td class="td_down"><input type="text" name="num1" onkeypress="return validarn(event)"></td>
+                <td class="td_up">Primer Numero:</td>
+                <td class="td_down"><input type="text" name="num1" class="datos" onkeypress="return validarn(event)"></td>
             </tr>
             <tr>
-                <td class="td_up">Numero 2</td>
-                <td class="td_down"><input type="text" name="num2" onkeypress="return validarn(event)"></td>
+                <td class="td_up">Segundo Numero:</td>
+                <td class="td_down"><input type="text" name="num2" class="datos" onkeypress="return validarn(event)"></td>
             </tr>
             <tr>
-                <td class="td_up">Numero 3</td>
-                <td class="td_down"><input type="text" name="num3" onkeypress="return validarn(event)"></td>
+                <td class="td_up">Tercer Numero:</td>
+                <td class="td_down"><input type="text" name="num3" class="datos" onkeypress="return validarn(event)"></td>
             </tr>
             <tr>
                 <td class="td_up"></td>
-                <td class="td_down"><input type="button" value="Calcular" name="enviar" onclick="return calcular(event)"></td>
+                <td class="td_down"><input type="button" value="Comparar" name="enviar" onclick="return calcular(event)"></td>
             </tr>
             <tr>
-                <td class="td_up">Resultado</td>
-                <td class="td_down"><input type="text" name="Resultado" id="Resultado" readonly="readonly" class="input_text"></td>
+                <td class="td_up">Mayor:</td>
+                <td class="td_down"><input type="text" name="mayor" id="mayor" readonly="readonly" class="input_text"></td>
             </tr>
             <tr>
                 <td class="td_up"></td>
@@ -40,6 +40,6 @@
             </tr>
         </table>
     </form>
-    <a href="formulario.html">Regreso a principal formulario</a>
+    <a href="main_problemas.html">Regreso a principal formulario</a>
 </body>
 </html>
