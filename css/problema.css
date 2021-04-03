@@ -4,6 +4,10 @@
     width: 100;
 }
 
+.datos{
+    color: rgb(102, 102, 170);
+}
+
 .td_down{
     align-items: center;
     justify-content: center;
@@ -20,6 +24,15 @@
 }
 
 *{
-    background-color: #85deff;
-    color: rgb(91, 91, 182); 
+    background-color: rgb(192, 187, 187);
+    color:rgb(49, 49, 49); 
+}
+body h1{
+    text-align: center;
+}
+body hr{
+    width: 90%;
+}
+body p{
+    text-align: center;
 }

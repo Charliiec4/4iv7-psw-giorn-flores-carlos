@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/problema.css">
+    <script src="JS/problema2.js"></script>
+    <title>Problema 2</title>
+</head>
+
+<body>
+    <h1>Problema 2</h1>
+    <hr>
+    <br>
+    <p>Calcula tus ganancias por venta, con un maximo de 3 ventas a la ves y con tu salario obten tus ganancias</p>
+    <br>
+    <form name="formulario" method="GET" action="problema2.html">
+        <table align="center" border="1">
+            <tr>
+                <td class="td_up">Sueldo:</td>
+                <td class="td_down"><input type="text" name="sueldo" class="datos" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up">1° Venta</td>
+                <td class="td_down"><input type="text" name="vent1" class="datos" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up">2° Venta</td>
+                <td class="td_down"><input type="text" name="vent2" class="datos" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up">3° Venta</td>
+                <td class="td_down"><input type="text" name="vent3" class="datos" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class="td_up"></td>
+                <td class="td_down">
+                    <input type="button" value="Listo" name="enviar" onclick="return todo(event)">
+                </td>
+            </tr>
+            <tr>
+                <td class="td_up">Comisión 1° venta</td>
+                <td class="td_down"><input type="text" name="comi1" id="comi1" readonly="readonly" class="input_text"></td>
+            </tr>
+            <tr>
+                <td class="td_up">Comisión 2° venta</td>
+                <td class="td_down"><input type="text" name="comi2" id="comi2" readonly="readonly" class="input_text"></td>
+            </tr>
+            <tr>
+                <td class="td_up">Comisión 3° venta</td>
+                <td class="td_down"><input type="text" name="comi3" id="comi3" readonly="readonly" class="input_text"></td>
+            </tr>
+            <tr>
+                <td class="td_up">Ganacia:</td>
+                <td class="td_down"><input type="text" name="ganancia" id="ganancia" readonly="readonly" class="input_text"></td>
+            </tr>
+            <tr>
+                <td class="td_up"></td>
+                <td class="td_down"><input type="button" name="borrard" value="Borrar" onclick="borrar()"></td>
+            </tr>
+        </table>
+    </form>
+    <a href="formulario.html">Regreso a fomrulario principal</a>
+</body>
+
+</html>
