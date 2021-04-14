@@ -24,6 +24,7 @@ function init(){
 
 function iniciarContador(){
     if(verificador == false){
+        //Funcion anomonima, cuando hay una dentro de otra
         var intervalo = setInterval(function (){
             tiempo += 0.01;
             temporizador.innerHTML = tiempo.toFixed(2);
