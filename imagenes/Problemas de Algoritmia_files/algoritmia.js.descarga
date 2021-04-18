@@ -45,69 +45,53 @@ function problema2(){
 }
 
 //problema 3
-function extraerCU(texto) {
-    let cu = []
-    for (let i = 0; i < texto.length; i++) {
-        if (cu.indexOf(texto.charAt(i)) == -1) {
-            cu += texto[i]
-        }
-    }
-    return cu
-}
-
 function problema3(){
-    var checkStr = document.querySelector('#p3-input').value;
-    
-    var checkOK = "QWERTYUIOPASDFGHJKLÑZXCVBNM,";
-    if(checkStr.length <= 70){
-        var seguir = true;
-        for(var i=0; i<checkStr.length; i++){
-            var tam = checkStr.charAt(i);
-            for(var j = 0; j < checkOK.length; j++){
-                if(tam == checkOK.charAt(j))
+    if(entrada.length <= 30){
+        var continuar = true;
+        for(var i=0; i<entrada.length; i++){
+            var teclitas = entrada.charAt(i);
+            for(var j = 0; j < teclas.length; j++){
+                if(teclitas == teclas.charAt(j))
                     break;
-                if(j == checkOK.length - 1){
-                    seguir = false;
+                if(j == teclas.length - 1){
+                    continuar = false;
                     break;
                 }
             }
         }
-        if(seguir == true){
-            var cadena = checkStr.split(',');
+        if(continuar == true){
+            var palabras = entrada.split(',');
             var array = [];
-            cadena.forEach(function(cadena){
-                var p3_array = [];
-             
-                for(var i = 0; i < cadena.length; i++){
-                    p3_array.push(cadena.charAt(i));
+            palabras.forEach(function(palabras){
+                var otraArray = [];
+                //Dividir la palabra por carácteres.
+                for(var i = 0; i < palabras.length; i++){
+                    otraArray.push(palabras.charAt(i));
                 }
-            
-                for(var i = p3_array.length -1; i >=0; i--){
-                    if(p3_array.indexOf(p3_array[i]) !== i) p3_array.splice(i,1);
+                //Eliminar carácteres repetidos.
+                for(var i = otraArray.length -1; i >=0; i--){
+                    if(otraArray.indexOf(otraArray[i]) !== i) otraArray.splice(i,1);
                 }
-                array.push(p3_array.length);
+                array.push(otraArray.length);
             });
-           
-            var p3_mas = Math.max.apply(null, array);
-            var p3_res = "";
-          
+            //Evalúa cuál tiene más elementos.
+            var mayor = Math.max.apply(null, array);
+            var respuesta = "";
+            //Concatenar la respuesta en el String.
             for(var i = 0; i < array.length; i ++){
-                if(array[i] == p3_mas){
-                    p3_res += cadena[i] + ",";
+                if(array[i] == mayor){
+                    respuesta += palabras[i] + ",";
                 }
             }
-            
-            var cu = extraerCU(checkStr);
-            var palabras = checkStr + " Caracteres Unicos: "+ cu;
-            document.querySelector('#p3-output').textContent= 'palabras: '+ palabras +
-            '\nLas palabra mas grande es: ' + p3_res + ' Con un total de ' + p3_mas + ' caracteres unicos';    
+            //Arrojar resultado.
+            document.querySelector('#p3-output').textContent= 'Las palabra o palabras con ' + respuesta + ' Con ' + mayor + ' caracteres';    
             
         }
         else{
-            alert("Caracteres invalidos (solo palabras, sin espacios)");
+            alert("Los carácteres que ingresaste son inválidos.");
         }
         } else{
-            alert("La palabra mas grande es de 23, no mas de 70 caracteres");
+            alert("No se permiten palabras con demasiados carácteres");
         }
 }
 
