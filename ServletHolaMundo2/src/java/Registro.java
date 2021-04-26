@@ -1,4 +1,4 @@
-/*
+/*/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -12,11 +12,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 
 import java.sql.Statement;
 //consultas bases de datos
 import java.sql.ResultSet;
 import javax.servlet.ServletConfig;
+
 /**
  *
  * @author gesto
@@ -28,52 +30,46 @@ public class Registro extends HttpServlet {
      * methods.
      *
      * @param request servlet request peticiones por parte del cliente
-     * @param response servlet response son las respuestas por parte del servidor
+     * @param response servlet response son las respuestas por parte del
+     * servidor
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    
     /*El servlet para poderse conectar con la BD es necesario inicializar sus elementos
     Necesitar de 3 objetos que viene de la clase sql*/
-    
-    
     private Connection con;
     private Statement set;
     private ResultSet rs;
-    
-    
+
     //vamos a crear el metodo constructor
-    
-    public void init(ServletConfig cfg) throws ServletException{
+    public void init(ServletConfig cfg) throws ServletException {
         //para conectarnos con la base de datos
-        String url = "jdbc:mysql:3306//localhost/registro4iv7";
-                    //driver:gestor:puerto//ip/nombrebd
+        String url = "jdbc:mysql:3306//localhost/registro4iv7_2";
+        //driver:gestor:puerto//ip/nombrebd
         String userName = "charliec4";
-        String password = "c08a11fCM";
-        
-        try{
-            
+        String password = "charliec44";
+
+        try {
+
             Class.forName("com.mysql.jdbc.Driver");
             //aveces el driver ya maneja por defecto el puerto de comunicacion es por ello que puede madar un error
             //en ese caso la 
             //url = "jdbc:mysql://localhostregistroiv7";
-            
-            
+
             con = DriverManager.getConnection(url, userName, password);
             set = con.createStatement();
             System.out.println("Se ha conectado");
-            
-        }catch(Exception e){
-            
-             System.out.println("No Se ha conectado"); 
-              System.out.println(e.getMessage());
-               System.out.println();
-            
+
+        } catch (Exception e) {
+
+            System.out.println("No Se ha conectado");
+            System.out.println(e.getMessage());
+            System.out.println();
+
         }
     }
-    
-    
-    protected void processRequest(HttpServletRequest request, 
+
+    protected void processRequest(HttpServletRequest request,
             HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -90,8 +86,6 @@ public class Registro extends HttpServlet {
             iph = request.getRemoteAddr();
             puertoh = request.getRemotePort();
 
-
-
             nom = request.getParameter("nombre");
             appat = request.getParameter("appat");
             appmat = request.getParameter("appmat");
@@ -99,47 +93,47 @@ public class Registro extends HttpServlet {
 
             edad = Integer.parseInt(request.getParameter("edad"));
 
-            try{
-                
+            try {
+
                 String q = "insert into Mregistro"
                         + "(nom_usu, appat_usu, apmat_usu, edad_usu, email_usu)"
-                        + "values('"+nom+"', ´"+appat+"´, '"+appmat+"', "+edad+", '"+correo+"')";
-                
+                        + "values('" + nom + "', '" + appat + "', '" + appmat + "', '" + edad + "', '" + correo + "')";
+
                 set.executeUpdate(q);
-                
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Registro de Usuarios</title>");            
-            out.println("</head>");
-            out.println("<body>"
-                    + "<br>Tu nombre es: " + nom);
-            out.println("<br>"
-                    + "Tu Apellido Paterno es:"+appat
-                    + "<br>"
-                    + "Tu Apellido Materno es:"+appmat
-                    + "<br>"
-                    + "Tu Edad es:"+edad
-                    + "<br>"
-                    + "Tu correo electronico es:"+correo
-                    + "<br>");
-            out.println("<h1>Registro Exitoso</h1>"
-                    + "<br>"
-                    + "La IP Local es: "+ip
-                    + "<br>"
-                    + "La IP del host: "+iph
-                    + "<br>"
-                    + "Puerto Local: " + puerto
-                    + "<br>"
-                    + "Puerto Host:" + puertoh
-                    + "<br>"
-                    + "<a href='index.html'>Regresar al Formulario</a>");
-            out.println("</body>");
-            out.println("</html>");
-            
+
+                out.println("<!DOCTYPE html>");
+                out.println("<html>");
+                out.println("<head>");
+                out.println("<title>Registro de Usuarios</title>");
+                out.println("</head>");
+                out.println("<body>"
+                        + "<br>Tu nombre es: " + nom);
+                out.println("<br>"
+                        + "Tu Apellido Paterno es:" + appat
+                        + "<br>"
+                        + "Tu Apellido Materno es:" + appmat
+                        + "<br>"
+                        + "Tu Edad es:" + edad
+                        + "<br>"
+                        + "Tu correo electronico es:" + correo
+                        + "<br>");
+                out.println("<h1>Registro Exitoso</h1>"
+                        + "<br>"
+                        + "La IP Local es: " + ip
+                        + "<br>"
+                        + "La IP del host: " + iph
+                        + "<br>"
+                        + "Puerto Local: " + puerto
+                        + "<br>"
+                        + "Puerto Host:" + puertoh
+                        + "<br>"
+                        + "<a href='index.html'>Regresar al Formulario</a>");
+                out.println("</body>");
+                out.println("</html>");
+
                 System.out.print("Datso registrados en la tabla");
-            }catch (Exception e){
-                
+            } catch (Exception e) {
+
             }
         }
     }
