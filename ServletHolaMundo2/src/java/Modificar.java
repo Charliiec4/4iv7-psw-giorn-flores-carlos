@@ -17,7 +17,7 @@ import javax.servlet.ServletConfig;
  *
  * @author demon
  */
-public class Registro extends HttpServlet {
+public class Modificar extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -78,44 +78,33 @@ public class Registro extends HttpServlet {
             
             //manipular los datos del formulario
             String nom, appat, appmat, correo, ip, iph;
-            int edad, puerto, puertoh;
-            
-            ip = request.getLocalAddr();
-            puerto = request.getLocalPort();
-            
-            iph = request.getRemoteAddr();
-            puertoh = request.getRemotePort();
-            
+            int edad, Id;
+      
             nom = request.getParameter("nombre");
             appat = request.getParameter("appat");
             appmat = request.getParameter("appmat");
             correo = request.getParameter("email");
             
+            Id = Integer.parseInt(request.getParameter("id"));
             edad = Integer.parseInt(request.getParameter("edad"));
             
             
             try{
-            
-                //querry para poder insertar los datos en la bd
-                /*
-                insert into nombretabla (atributo, atributo, ...)
-                values ("valor1", 'valor2', valor3, ...)
-                */
-                
-                String q = "insert into Mregistro"
-                        + "(nom_usu, appat_usu, apmat_usu, edad, email_usu) "
-                        + "values "
-                        + "('"+nom+"', '"+appat+"', '"+appmat+"', "+edad+", '"+correo+"')";
-            
-                set.executeUpdate(q);
            
-            out.println("<!DOCTYPE html>");
+                String q = "update Mregistro set nom_usu='"+nom+"',appat_usu='"+appat+"',apmat_usu='"+appmat+"',edad="+edad+",email_usu='"+correo+"' where id_usu="+Id;
+                set.executeUpdate(q);
+                
+                String ql = "select from Mregistro where id_usu="+Id;
+                  
+                set = con.createStatement();
+      
+                     out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Registro de Usuarios</title>");            
             out.println("</head>");
             out.println("<body>"
-                    + "<br>Tu nombre es: " + nom);
+                    + "<br>Tu nombre es: " +nom);
             out.println("<br>"
                     + "Tu Apellido Paterno es:"+appat
                     + "<br>"
@@ -124,28 +113,24 @@ public class Registro extends HttpServlet {
                     + "Tu Edad es:"+edad
                     + "<br>"
                     + "Tu correo electronico es:"+correo
-                    + "<br>");
-            out.println("<h1>Registro Exitoso</h1>"
                     + "<br>"
-                    + "La IP Local es: "+ip
-                    + "<br>"
-                    + "La IP del host: "+iph
-                    + "<br>"
-                    + "Puerto Local: " + puerto
-                    + "<br>"
-                    + "Puerto Host:" + puertoh
                     + "<br>"
                     + "<a href='index.html'>Regresar al Formulario</a>"
-                    + "<br>"
-                    + "<a href='Consultar'>Consultar la Tabla General de Usuarios</a>");
+                    + "<br>");
+            out.println("<a href='Consultar'>Consultar la Tabla General de Usuarios</a>"); 
             out.println("</body>");
             out.println("</html>");
+                    
+                    System.out.println("Consulta exitosa");
+                rs.close();
+                set.close();
+                con.close();
             
-                System.out.println("Datos registrados en la tabla");
+                System.out.println("Datos actualizados en la tabla");
             
             }catch(Exception e){
                 
-                System.out.println("No se registraron los datos en la tabla");
+                
                 System.out.println(e.getMessage());
                 System.out.println(e.getStackTrace());
                 out.println("<!DOCTYPE html>");
@@ -161,7 +146,8 @@ public class Registro extends HttpServlet {
             out.println("</html>");
             }
             
-        }
+        } 
+       
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

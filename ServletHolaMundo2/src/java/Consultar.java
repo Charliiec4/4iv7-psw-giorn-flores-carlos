@@ -40,8 +40,8 @@ public class Consultar extends HttpServlet {
         String url = "jdbc:mysql:3306//localhost/registro4iv7_2";
                     //driver:gestorbd:puerto//IP/nombrebd
                     
-        String userName = "root";
-        String password = "arsenal280104";
+        String userName = "charliec4";
+        String password = "c08a11fCM";
         
         try{
             
@@ -118,7 +118,7 @@ public class Consultar extends HttpServlet {
                     nom = rs.getString("nom_usu");
                     appat = rs.getString("appat_usu");
                     appmat = rs.getString("apmat_usu");
-                    edad = rs.getInt("edad_usu");
+                    edad = rs.getInt("edad");
                     correo = rs.getString("email_usu");
                     out.println("<tr>"
                             + "<td>"+id+"</td>"

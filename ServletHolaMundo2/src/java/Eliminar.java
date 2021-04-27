@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -46,8 +45,8 @@ public class Eliminar extends HttpServlet {
         String url = "jdbc:mysql:3306//localhost/registro4iv7_2";
                     //driver:gestorbd:puerto//IP/nombrebd
                     
-        String userName = "root";
-        String password = "arsenal280104";
+        String userName = "charliec4";
+        String password = "c08a11fCM";
         
         try{
             
@@ -155,5 +154,4 @@ public class Eliminar extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
 }

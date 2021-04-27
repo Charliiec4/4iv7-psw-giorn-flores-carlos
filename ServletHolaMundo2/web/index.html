@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -10,6 +10,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, 
               initial-scale=1.0">
+        <link src="" meta="">
     </head>
     <body>
         <div class="container" >
@@ -62,7 +63,33 @@ and open the template in the editor.
                 UPDATE mregistro SET appat_usu = variable1 where id_usu = variable2 </label>
             </form>
         </div>
+        <br>
+        <br>
+        <div class="container" >
+            <form name="formulario" method="post"  
+                  action="Modificar">
+                 <label>Id Actual:</label>
+                <input type="number" name="id"  >
+                <br>
+                <label>Nuevo Nombre:</label>
+                <input type="text" name="nombre"  >
+                <br>
+                <label>Nuevo Apellido Paterno:</label>
+                <input type="text" name="appat"  >
+                <br>
+                <label>Nuevo Apellido Materno:</label>
+                <input type="text" name="appmat"  >
+                <br>
+                <label>Nuevo Edad:</label>
+                <input type="number" name="edad" min="01" max="99" 
+                       size="2"  >
+                <br>
+                <label>Nuevo Correo:</label>
+                <input type="email" name="email"  >
+                <br>
+                <input type="submit" value="Enviar Datos de Registro">
+                <input type="reset" value="Borrar Registro">
+            </form>
+        </div>
     </body>
 </html>
-message.txt
-3 KB
