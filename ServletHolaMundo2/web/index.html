@@ -6,16 +6,18 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>CRUD JAVA</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, 
               initial-scale=1.0">
-        <link src="" meta="">
+        <link rel="stylesheet" href="css/menuServlet.css">
+        <script src="js/menujs.js"></script>
     </head>
     <body>
         <div class="container" >
             <form name="formulario" method="post"  
                   action="Registro">
+                  <h1>Registrar</h1>
                 <label>Nombre:</label>
                 <input type="text" name="nombre"  >
                 <br>
@@ -32,63 +34,53 @@ and open the template in the editor.
                 <label>Correo:</label>
                 <input type="email" name="email"  >
                 <br>
-                <input type="submit" value="Enviar Datos de Registro">
-                <input type="reset" value="Borrar Registro">
+                <input class="boton" type="submit" value="Enviar Datos de Registro" onclick="validar(event)">
+                <input class="boton" type="reset" value="Borrar Registro">
             </form>
         </div>
         <br>
         <div class="contendorConsultar">
             <br>
+            <h1>Consultar usuarios</h1>
             <form method="get" name="formularioconsultar" action="Consultar">
-                <input type="submit" value="Consultar Tabla General de Usuarios" >
+                <input class="boton" type="submit" value="Consultar Tabla General de Usuarios" >
             </form>
         </div>
         <br>
         <div class="contenedorEliminar" >
             <br>
+            <h1>Eliminar Usuario</h1>
             <form method="post" name="formularioeliminar" action="Eliminar">
                 <label>Ingresa el ID del usuario que deseas eliminar</label>
                 <input type="text" name="ideliminar" >
-                <input type="submit" value="Eliminar Usuario" >
+                <input class="boton" type="submit" value="Eliminar Usuario" onclick="vNum(event)">
             </form>
         </div>
         <br>
         <div class="contenedorActualizar" >
-            <form>
-                <label>Tarea wiiiiii UwU/
-                quiero que se pueda actualizar los datos de los registros, por ejemplo
-                que se pueda cambiar:
-                nombre, appat, apmat, edad, correo o todos los datos
-                Es por ello que deben de ocupar 
-                UPDATE mregistro SET appat_usu = variable1 where id_usu = variable2 </label>
-            </form>
-        </div>
-        <br>
-        <br>
-        <div class="container" >
             <form name="formulario" method="post"  
                   action="Modificar">
-                 <label>Id Actual:</label>
-                <input type="number" name="id"  >
+                  <h1>Modificar Usuario</h1>
+                <label>id:</label>
+                <input type="text" name="id" size="8">
                 <br>
-                <label>Nuevo Nombre:</label>
+                <label>Nombre:</label>
                 <input type="text" name="nombre"  >
                 <br>
-                <label>Nuevo Apellido Paterno:</label>
+                <label>Apellido Paterno:</label>
                 <input type="text" name="appat"  >
                 <br>
-                <label>Nuevo Apellido Materno:</label>
+                <label>Apellido Materno:</label>
                 <input type="text" name="appmat"  >
                 <br>
-                <label>Nuevo Edad:</label>
+                <label>Edad:</label>
                 <input type="number" name="edad" min="01" max="99" 
                        size="2"  >
                 <br>
-                <label>Nuevo Correo:</label>
+                <label>Correo:</label>
                 <input type="email" name="email"  >
                 <br>
-                <input type="submit" value="Enviar Datos de Registro">
-                <input type="reset" value="Borrar Registro">
+                <input class="boton" type="submit" value="Enviar Datos a Actualizar" onclick="validar(event)">
             </form>
         </div>
     </body>

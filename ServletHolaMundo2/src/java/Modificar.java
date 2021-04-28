@@ -100,7 +100,8 @@ public class Modificar extends HttpServlet {
                      out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Registro de Usuarios</title>");            
+            out.println("<title>Registro de Usuarios</title>");
+            out.println("<link rel=\"stylesheet\" href=\"css/menuServlet.css\">");            
             out.println("</head>");
             out.println("<body>"
                     + "<br>Tu nombre es:dd" +nom);

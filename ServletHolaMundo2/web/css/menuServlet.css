@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    padding: 0px, 0px;
+    margin: 10px;
+
+    font-family: 'ROBOTO', sans-serif;
+}
+
+html, body {
+    text-align: center;
+    background-color: white;
+    color: #0d0c08;
+}
+em{
+    font-style: bold;
+}
+
+.container {
+    background-color: #97c7ca;
+}
+.formulario{
+    width: 600px;
+    max-width: 100%;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.contendorConsultar {
+    background-color: #a497eb;
+}
+
+.contenedorEliminar {
+    background-color: #5fb7e0;
+}
+
+.contenedorActualizar {
+    background-color: #6ab638;
+
+}
