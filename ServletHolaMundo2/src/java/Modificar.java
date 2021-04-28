@@ -35,7 +35,6 @@ public class Modificar extends HttpServlet {
     
     private Connection con;
     private Statement set;
-    private ResultSet rs;
     
     //vamos a crear el metodo constructor
     
@@ -94,9 +93,9 @@ public class Modificar extends HttpServlet {
                 String q = "update Mregistro set nom_usu='"+nom+"',appat_usu='"+appat+"',apmat_usu='"+appmat+"',edad="+edad+",email_usu='"+correo+"' where id_usu="+Id;
                 set.executeUpdate(q);
                 
-                String ql = "select from Mregistro where id_usu="+Id;
+                //String ql = "select from Mregistro where id_usu="+Id;
                   
-                set = con.createStatement();
+                //set = con.createStatement();
       
                      out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -104,7 +103,7 @@ public class Modificar extends HttpServlet {
             out.println("<title>Registro de Usuarios</title>");            
             out.println("</head>");
             out.println("<body>"
-                    + "<br>Tu nombre es: " +nom);
+                    + "<br>Tu nombre es:dd" +nom);
             out.println("<br>"
                     + "Tu Apellido Paterno es:"+appat
                     + "<br>"
@@ -122,7 +121,7 @@ public class Modificar extends HttpServlet {
             out.println("</html>");
                     
                     System.out.println("Consulta exitosa");
-                rs.close();
+               
                 set.close();
                 con.close();
             
@@ -139,7 +138,7 @@ public class Modificar extends HttpServlet {
                 out.println("<title>Registro de Usuarios</title>");            
                 out.println("</head>");
                 out.println("<body>"
-                        + "<h1>No se pudo registrar, hubo un error</h1>"
+                        + "<h1>No se pudo actualizar, hubo un error</h1>"
                         + "<a href='index.html'>Regresar al Formulario</a>");
                         
             out.println("</body>");

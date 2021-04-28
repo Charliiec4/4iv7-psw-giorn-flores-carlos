@@ -88,3 +88,8 @@ function validar(formulario){
 
     return b.test(txt);
 }
+
+window.onload = () => {
+    const myInput = document.getElementById('myInput');
+    myInput.onpaste = e => e.preventDefault();
+   }
