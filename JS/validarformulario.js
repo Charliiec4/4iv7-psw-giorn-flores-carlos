@@ -90,6 +90,14 @@ function validar(formulario){
 }
 
 window.onload = () => {
-    const myInput = document.getElementById('myInput');
+    const myInput = document.querySelector('#myInput');
     myInput.onpaste = e => e.preventDefault();
+   }
+   window.onload = () => {
+    const Input2 = document.querySelector('#Input2');
+    Input2.onpaste = e => e.preventDefault();
+   }
+   window.onload = () => {
+    const Input3 = document.querySelector('#Input3');
+    Input3.onpaste = e => e.preventDefault();
    }

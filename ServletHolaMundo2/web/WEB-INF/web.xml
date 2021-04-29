@@ -4,7 +4,7 @@
         <servlet-name>Registro</servlet-name>
         <servlet-class>Registro</servlet-class>
     </servlet>
-    <servlet>
+     <servlet>
         <servlet-name>Consultar</servlet-name>
         <servlet-class>Consultar</servlet-class>
     </servlet>
